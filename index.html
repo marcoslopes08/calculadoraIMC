@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora IMC</title>
+
+    <link rel="stylesheet" href="css/estiloCalculadoraIMC.css">
+
+</head>
+<body>
+
+    <div class="foto-perfil">
+	    
+        <i href="https://imgbox.com/fENzJE9h" target="_blank">
+            <img class="foto-perfil" src="https://thumbs2.imgbox.com/ee/8c/fENzJE9h_t.png" 
+            alt="foto de perfil" /></i>
+        
+    </div>
+
+    <div class="comentario">
+        <span>OLÁ...<br>			
+            Ao lado, você poderá calcular seu<br>
+            Índice de Massa Corporal (IMC)<br>
+            e verificar como anda seu peso.<br><br>
+        
+            Vale ressaltar que, esta Calculadora é<br>
+            apenas um mecanismo de consulta,<br>
+            e todas e quaisquer avaliações<br>
+            devem ter acompanhamento de um<br>
+            profissional qualificado de saúde.
+        </span>
+    </div>
+        
+    <main class="fundo">
+        <div class="container">
+            <div class="title"> Calculadora - IMC </div>
+            <div class="input">
+                <label>Nome</label>
+                <input type="text" id="nome">
+            </div>
+            <div class="input">
+                <label>Altura</label>
+                <input type="number" id="altura">
+            </div>
+            <div class="input">
+                <label>Peso</label>
+                <input type="number" id="peso">
+            </div>
+           
+            <button id="calcular">CALCULAR</button>
+
+            <div class="result" id="resultado"></div> 
+            
+        </div>
+    </main>
+    
+    <script src="java/imc.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+* { margin: 0; padding: 0; } /* zera margens e preenchimentos em toda a Tela, e isso permite que 
+                            "padding" e "margin" nas Classes abaixos cumpram seu papel, ou seja
+                            não haverá interferência de margens/preenchimentos PADRÕES do 
+                            próprio Browser */
+
+.fundo {
+    background-image: linear-gradient(120deg, black, rgb(197, 163, 39)); 
+        /* cor de fundo de toda a Tela:
+        120deg = 120 graus de cor degradê que começa no canto superior esquerdo como BLACK 
+        e termina no conto inferior direito como AMARELO */
+}
+
+.foto-perfil { 
+    display: flex; /* permite que a Foto de Perfil possa ser posicionada na Tela */
+    float: left; /* coloca a Foto de Perfil flutuando do lado esquerdo da Tela */
+    position: relative; /* posição responsiva da Foto de Perfil, vai se adaptar à Tela */
+    height: auto; /* altura máxima da foto */
+    width: 40%; /* largura da foto */
+    border-radius: 50%; /* deixa a foto totalmente redonda */
+    margin-bottom: -600px; /* margem inferior, evita que Comentário/Foto de Perfil fique em cima da Calculadora */
+    margin-top: 20px; /* distância entre a Foto de Perfil e o topo da Tela */
+    margin-left: 70px; /* distância entre a Foto de Perfil e o lado esquerda da Tela */
+    box-shadow: 0 0 10px black; /* efeito sombreado ao redor da foto, causa a impressão da Foto de Perfil estar flutuando 
+                                    quatro números após 'bos-shadow' colocam uma moldura em volta da foto */
+}
+
+.comentario { 
+    display: flex; /* permite que os Comentários possam ser posicionados na Tela */
+    float: left; /* flutua os Comentários ao lado da Foto de Perfil, lado esquerdo */
+    margin-top: 300px; /* margem superior do comentário em relação ao topo da Tela*/
+    margin-bottom: -600px; /* margem inferior, evita que a Calculadora fica em cima do Comentário/Foto de Perfil */
+    margin-left: 90px; /* espaçamento da margem esquerda do comentário em relação a Tela */
+    color: rgb(197, 163, 39); /* cor da fonte */
+    font-size:larger; /* tamanho aumentado da fonte */ 
+    text-align: center; /* centraliza o comentário */
+    text-shadow: 0 0 1px black; /* efeito sombreado ao redor das letras */
+    font: italic 1.3rem Lato, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* estilos e fontes da letra */
+    
+}
+
+main {
+    display: flex; /* permite que a Calculadora possa ser posicionada na Tela */
+    width: 100vw; /* espaçamento entre a Calculadora e a lateral esquerda da Tela */
+    height: 100vh; /* espaçamento entre a Calculadora e a parte superior da Tela */
+    justify-content: center; /* justifica e centraliza a Calculadora no meio da Tela */
+    align-items: center; /* alinha e centraliza a Calculadora no meio da Tela */
+}
+
+.container { /* cor de Fundo da Calculadora */
+    display: flex; /* permite que a todos os Labels possam ser posicionados no centro da Calculadora */
+    flex-direction: column; /* alinha todas as Labels uma abaixo da outra, dentro da Calculadora */
+    background: rgb(224, 205, 136); /* cor de fundo da Calculadora */
+    width: 400px; /* largura da Calculadora */
+    height: 600px; /* altura da Calculadora */
+    align-items: center; /* centraliza todas as Labels dentro da Calculadora */
+    justify-content: space-evenly; /* evita que as Labels fiquem grudadas uma embaixo da outra */
+    border-radius: 30px; /* arredondamento dos cantos da Calculadora */
+    box-shadow: 0 0 10px black; /* sombreado nos lados (superior/inferior/direito/esquerdo) da Calculadora */
+}
+
+.title {
+    display: flex; /* permite que o Título possam ser posicionados na parte superior da Calculadora */
+    justify-content: center; /* centraliza o Título no espaço reservado a ele, entre a borda superior e a linha*/
+    align-items: center; /* centraliza o Título  */
+    width: 100%; /* define que a linha abaixo do Título vá da lateral esquerda até a direita */
+    height: 50px; /* altura entre a parte superior do Título e a linha abaixo dele */
+    font: bold 2.5rem Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif; /* estilos e fontes da letra */
+    border-bottom: solid 5px black; /* linha abaixo do Título (Calculadora - IMC) */
+}
+
+.input {
+    display: flex; /* permite que as Labels (Nome/Altura/Peso) possam ser posicionados no lado direito da Calculadora */
+    width: 300px; /* espaçamento entre Nome/Altura/Peso e as caixas onde são digitadas as informações */
+    height: 50px; /* altura das caixas onde são digitadas as informações */
+    justify-content: space-between; /* coloca espaçamento entre Nome/Altura/Peso as caixas onde são digitadas estas informações */
+    align-items: center; /* alinha Nome/Altura/Peso no mesmo eixo central das caixas onde são digitadas estas informações*/
+}
+
+.input input {
+    width: 200px; /* largura que cada caixa onde são digitadas as informações terá */
+    height: 50px; /* altura que cada caixa onde são digitadas as informações terá */
+    border-radius: 5px; /* arredondamento dos cantos que cada caixa onde são digitadas as informações terá */
+    border: none; /* borda superior/esquerda padrão que cada caixa onde são digitadas as informações tem, neste caso NONE retira estas bordas */
+    outline: 0; /* bordas de fundo QUADRADAS (superior/inferior/esquerda/direita) que cada caixa onde são digitadas as informações tem, neste caso 0(zero) retira tais bordas */
+    font: bold 1.5rem Lato, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* estilos e fontes da letra */
+    text-align: center; /* centraliza o que é digitado dentro das caixas */
+    text-transform: capitalize; /* coloca a primeira letra inicial do nome em MAIUSCULA */
+}
+
+.input label {
+    font: bold 1.5rem Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif; /* estilos e fontes das Labels (Nome/Altura/Peso) */
+}
+
+button {
+    width: 300px; /* largura do Botão CALCULAR */
+    height: 40px; /* largura do Botão CALCULAR */
+    font: bold 1.2rem Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif; /* estilos e fontes da letra do Botão CALCULAR */
+    background: #000; /* cor de fundo do Botão CALCULAR */
+    color: rgb(224, 205, 136); /* cor das letras do Botão CALCULAR */
+    border-radius: 5px; /* arredondamento dos cantos do Botão CALCULAR */
+    cursor: pointer; /* estilo do cursor quando colocado em cima do Botão CALCULAR - 
+                    estilo DEDO INDICADOR - "none" faz o cursor aparecer como SETA */
+    border: none; /* bordas CLARAS ao redor do Botão CALCULAR, neste caso NONE retira estas bordas */
+    outline: 0; /* bordas de fundo QUADRADAS (superior/inferior/esquerda/direita) do Botão CALCULAR */
+}
+
+button:hover { /* animação/flutuar do Botão CALCULAR */
+    background-color: rgb(32, 146, 108); /* quando o mouse for posicionado em cima do Botão CALCULAR ele mudará de cor */
+    color: rgb(0, 238, 255); /* quando o mouse for posicionado em cima do Botão CALCULAR a letra mudará de cor */
+}
+
+.result {
+    display: flex; /* permite que o texto de saída possa ser posicionado dentro do Box Resultado */
+    align-items: center; /* alinha o texto de saída dentro do Box Resultado */
+    width: 300px; /* largura do Box Resultado */
+    height: 150px; /* altura do Box Resultado */
+    border-radius: 5px; /* arredondamento dos cantos do Box Resultado */
+    font: italic 1.5rem Lato, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* estilos e fontes da letra dentro do box onde é mostrado o Resultado */
+    box-shadow: 0px 0px 10px black; /* sombreado ao redor do Box Resultado */
+    background: #000; /* cor de fundo do Box Resultado */
+    color: rgb(224, 205, 136); /* cor da letra dentro do Box Resultado */
+    padding: 20px; /* espaçamento entre a margem direita do Box Resultado e o texto, dentro dele */
+    box-sizing: border-box; /* permite que o Box Resultado tenha a largura estipulada em "width: 300px", acima */
+    user-select: none; /* "none" especifica que quando o mouse for colocado em cima do Box Resultado, o cursor aparecerá como SETA */
+}
+ 
+/* Os comandos abaixo funcionam no Modo Responsivo */
+@media all and (max-width: 980px) { /* Tamanho máximo do Container de Textos */
+    main{
+        position: relative; /* esconde a Foto de Perfil atrás da Calculadora no Modo Responsivo */ 
+    }
+    .comentario { 
+        position: fixed; /* esconde os comentários atrás da Calculadora no Modo Responsivo */
+    }
+    .container { /* cor de Fundo da Calculadora */
+       border-radius: 10px; /* arredondamento dos cantos da Calculadora */
+    }
+}
