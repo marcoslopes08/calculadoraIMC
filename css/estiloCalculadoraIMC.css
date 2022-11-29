@@ -91,6 +91,17 @@ main {
     font: bold 1.5rem Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif; /* estilos e fontes das Labels (Nome/Altura/Peso) */
 }
 
+.input .labelExemplo1 { 
+    margin-top: -15px; /* espaçamento para colocar as palavras ALTURA e PESO pra cima */
+}
+
+.input .labelExemplo2 {
+    font: bold 0.77rem Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif; /* estilos e fontes das Labels (Nome/Altura/Peso) */
+    margin-top: 25px; /* espaçamento para colocar os Exemplos embaixo das palavras ALTURA e PESO */
+    /* width: 100px; */
+    margin-left: -72px; /* alinha os Exemplos com as palavras ALTURA e PESO  */
+}
+
 button {
     width: 300px; /* largura do Botão CALCULAR */
     height: 40px; /* largura do Botão CALCULAR */
@@ -124,6 +135,10 @@ button:hover { /* animação/flutuar do Botão CALCULAR */
     user-select: none; /* "none" especifica que quando o mouse for colocado em cima do Box Resultado, o cursor aparecerá como SETA */
 }
  
+.exemplo {
+    font-size: small;
+    margin-top: 10px;
+}
 /* Os comandos abaixo funcionam no Modo Responsivo */
 @media all and (max-width: 980px) { /* Tamanho máximo do Container de Textos */
     main{
